@@ -56,6 +56,7 @@ public class Main {
     }
 
     private static void menuCrear(Scanner teclado) {
+        System.out.println();
         System.out.println("***   MENU INSERTAR CLIENTE   ***");
         System.out.println("--------------------------------");
 
@@ -80,6 +81,7 @@ public class Main {
     }
 
     private static void menuLeer(Scanner teclado) {
+        System.out.println();
         System.out.println("***   MENU LEER CLIENTE   ***");
         System.out.println("--------------------------------");
 
@@ -87,9 +89,11 @@ public class Main {
         Long id = teclado.nextLong();
         teclado.nextLine();
         System.out.println(gestorCliente.read(id));
+        System.out.println();
     }
 
     private static void menuActualizar(Scanner teclado) {
+        System.out.println();
         System.out.println("***   MENU ACTUALIZAR CLIENTE   ***");
         System.out.println("--------------------------------");
         System.out.println("INTRODUCE ID DEL CLIENTE A ACTUALIZAR");
@@ -138,6 +142,7 @@ public class Main {
     }
 
     private static void menuBorrar(Scanner teclado) {
+        System.out.println();
         System.out.println("***   MENU BORRAR CLIENTE   ***");
         System.out.println("--------------------------------");
 
@@ -145,16 +150,20 @@ public class Main {
         Long id = teclado.nextLong();
         teclado.nextLine();
         gestorCliente.delete(id);
+        System.out.println();
     }
 
     public static void menuLeerTodos() {
+        System.out.println();
         List<Cliente> listado = gestorCliente.readAll();
         for (Cliente cliente : listado) {
             System.out.println(cliente);
         }
+        System.out.println();
     }
 
     private static void mostrarOpcionesPpal() {
+        System.out.println();
         System.out.println("***   INTRODUCE OPCION:   ***");
         System.out.println("-----------------------------");
         System.out.println("1) Introducir Cliente");
@@ -163,5 +172,6 @@ public class Main {
         System.out.println("4) Borrar Cliente");
         System.out.println("5) Mostrar todos los Clientes");
         System.out.println("6) SALIR");
+        System.out.println();
     }
 }
